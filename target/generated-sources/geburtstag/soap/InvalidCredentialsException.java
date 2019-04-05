@@ -7,16 +7,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java-Klasse für getGeburtstagByDate complex type.
+ * <p>Java-Klasse für InvalidCredentialsException complex type.
  * 
  * <p>Das folgende Schemafragment gibt den erwarteten Content an, der in dieser Klasse enthalten ist.
  * 
  * <pre>
- * &lt;complexType name="getGeburtstagByDate"&gt;
+ * &lt;complexType name="InvalidCredentialsException"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="arg0" type="{http://soap.geburtstag/}date" minOccurs="0"/&gt;
+ *         &lt;element name="message" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -26,35 +26,35 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "getGeburtstagByDate", propOrder = {
-    "arg0"
+@XmlType(name = "InvalidCredentialsException", propOrder = {
+    "message"
 })
-public class GetGeburtstagByDate {
+public class InvalidCredentialsException {
 
-    protected Date arg0;
+    protected String message;
 
     /**
-     * Ruft den Wert der arg0-Eigenschaft ab.
+     * Ruft den Wert der message-Eigenschaft ab.
      * 
      * @return
      *     possible object is
-     *     {@link Date }
+     *     {@link String }
      *     
      */
-    public Date getArg0() {
-        return arg0;
+    public String getMessage() {
+        return message;
     }
 
     /**
-     * Legt den Wert der arg0-Eigenschaft fest.
+     * Legt den Wert der message-Eigenschaft fest.
      * 
      * @param value
      *     allowed object is
-     *     {@link Date }
+     *     {@link String }
      *     
      */
-    public void setArg0(Date value) {
-        this.arg0 = value;
+    public void setMessage(String value) {
+        this.message = value;
     }
 
 }

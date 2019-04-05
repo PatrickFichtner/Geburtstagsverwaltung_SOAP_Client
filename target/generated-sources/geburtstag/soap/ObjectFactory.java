@@ -28,10 +28,8 @@ public class ObjectFactory {
     private final static QName _GetAllCategoriesResponse_QNAME = new QName("http://soap.geburtstag/", "getAllCategoriesResponse");
     private final static QName _GetAllGeburtstage_QNAME = new QName("http://soap.geburtstag/", "getAllGeburtstage");
     private final static QName _GetAllGeburtstageResponse_QNAME = new QName("http://soap.geburtstag/", "getAllGeburtstageResponse");
-    private final static QName _GetAllUsers_QNAME = new QName("http://soap.geburtstag/", "getAllUsers");
-    private final static QName _GetAllUsersResponse_QNAME = new QName("http://soap.geburtstag/", "getAllUsersResponse");
-    private final static QName _GetGeburtstagByDate_QNAME = new QName("http://soap.geburtstag/", "getGeburtstagByDate");
-    private final static QName _GetGeburtstagByDateResponse_QNAME = new QName("http://soap.geburtstag/", "getGeburtstagByDateResponse");
+    private final static QName _InvalidCredentialsException_QNAME = new QName("http://soap.geburtstag/", "InvalidCredentialsException");
+    private final static QName _AccessRestrictedException_QNAME = new QName("http://soap.geburtstag/", "AccessRestrictedException");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: geburtstag.soap
@@ -73,35 +71,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetAllUsers }
+     * Create an instance of {@link InvalidCredentialsException }
      * 
      */
-    public GetAllUsers createGetAllUsers() {
-        return new GetAllUsers();
+    public InvalidCredentialsException createInvalidCredentialsException() {
+        return new InvalidCredentialsException();
     }
 
     /**
-     * Create an instance of {@link GetAllUsersResponse }
+     * Create an instance of {@link AccessRestrictedException }
      * 
      */
-    public GetAllUsersResponse createGetAllUsersResponse() {
-        return new GetAllUsersResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetGeburtstagByDate }
-     * 
-     */
-    public GetGeburtstagByDate createGetGeburtstagByDate() {
-        return new GetGeburtstagByDate();
-    }
-
-    /**
-     * Create an instance of {@link GetGeburtstagByDateResponse }
-     * 
-     */
-    public GetGeburtstagByDateResponse createGetGeburtstagByDateResponse() {
-        return new GetGeburtstagByDateResponse();
+    public AccessRestrictedException createAccessRestrictedException() {
+        return new AccessRestrictedException();
     }
 
     /**
@@ -189,55 +171,29 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllUsers }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link InvalidCredentialsException }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link GetAllUsers }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link InvalidCredentialsException }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.geburtstag/", name = "getAllUsers")
-    public JAXBElement<GetAllUsers> createGetAllUsers(GetAllUsers value) {
-        return new JAXBElement<GetAllUsers>(_GetAllUsers_QNAME, GetAllUsers.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.geburtstag/", name = "InvalidCredentialsException")
+    public JAXBElement<InvalidCredentialsException> createInvalidCredentialsException(InvalidCredentialsException value) {
+        return new JAXBElement<InvalidCredentialsException>(_InvalidCredentialsException_QNAME, InvalidCredentialsException.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllUsersResponse }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link AccessRestrictedException }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link GetAllUsersResponse }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link AccessRestrictedException }{@code >}
      */
-    @XmlElementDecl(namespace = "http://soap.geburtstag/", name = "getAllUsersResponse")
-    public JAXBElement<GetAllUsersResponse> createGetAllUsersResponse(GetAllUsersResponse value) {
-        return new JAXBElement<GetAllUsersResponse>(_GetAllUsersResponse_QNAME, GetAllUsersResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetGeburtstagByDate }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link GetGeburtstagByDate }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://soap.geburtstag/", name = "getGeburtstagByDate")
-    public JAXBElement<GetGeburtstagByDate> createGetGeburtstagByDate(GetGeburtstagByDate value) {
-        return new JAXBElement<GetGeburtstagByDate>(_GetGeburtstagByDate_QNAME, GetGeburtstagByDate.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetGeburtstagByDateResponse }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link GetGeburtstagByDateResponse }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://soap.geburtstag/", name = "getGeburtstagByDateResponse")
-    public JAXBElement<GetGeburtstagByDateResponse> createGetGeburtstagByDateResponse(GetGeburtstagByDateResponse value) {
-        return new JAXBElement<GetGeburtstagByDateResponse>(_GetGeburtstagByDateResponse_QNAME, GetGeburtstagByDateResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://soap.geburtstag/", name = "AccessRestrictedException")
+    public JAXBElement<AccessRestrictedException> createAccessRestrictedException(AccessRestrictedException value) {
+        return new JAXBElement<AccessRestrictedException>(_AccessRestrictedException_QNAME, AccessRestrictedException.class, null, value);
     }
 
 }
