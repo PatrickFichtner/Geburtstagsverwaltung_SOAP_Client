@@ -13,8 +13,9 @@ import geburtstag.soap.Date;
 import geburtstag.soap.InvalidCredentialsException_Exception;
 
 /**
- * Mini-Beispiel zum Aufruf eines SOAP-Webservices. Damit das funktioniert, muss
- * im Hintergrund das Projekt "SOAP_Server_Beispiel" ausgeführt werden.
+ * Aufruf des SOAP-Webservice der Geburtstagsverwaltung-Anwendung. Ausgabe von
+ * Vorname, Nachname, Geburtsdatum und allen Kategorien nach erfolgreichem
+ * Login.
  */
 public class Main {
 
